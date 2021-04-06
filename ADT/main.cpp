@@ -15,4 +15,6 @@ int main() {
 
     //Menampilkan Jam yang diinputkan
     jam.cetakJam();
+    
+    return 0;
 }
