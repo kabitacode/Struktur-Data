@@ -26,15 +26,15 @@ struct tJam {
 
     bool isValid() //Mengecek jam,menit,detik yang diinputkan
     {
-        if(hh <= 0 || 23 <= hh)
+        if(hh < 0 || hh > 23)
         {
             return false;
         }
-         if(mm <= 0 || 59 <= mm)
+         if(mm < 0 || mm > 59)
         {
             return false;
         }
-         if(ss <= 0 || 59 <= ss)
+         if(ss < 0 || ss > 59)
         {
             return false;
         }
@@ -67,7 +67,7 @@ struct tJam {
         }
          else
         {
-            cout << "Format Jam yang anda masukan Salah!" << endl;
+            cout << "Jam yang anda masukan Salah" << endl;
         }
     }
 
