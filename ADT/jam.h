@@ -67,7 +67,7 @@ struct tJam {
         }
          else
         {
-            cout << "Format Jam yang anda masukan Salah!" << endl;
+            cout << "Jam yang anda masukan Salah" << endl;
         }
     }
 
