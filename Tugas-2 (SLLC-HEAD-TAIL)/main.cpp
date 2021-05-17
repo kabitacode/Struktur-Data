@@ -5,6 +5,8 @@
 
 #include <iostream>
 #include <stdlib.h>
+#include <limits>
+#include <ios>
 
 using namespace std;
 
@@ -158,7 +160,7 @@ void tampilData() {
 
 void cariDataTertentu() {
 	int i;
-	bool ditemukan = false;
+	bool dataDitemukan = false;
 	TNode *nodeBantu;
     nodeBantu = head;
 
@@ -168,17 +170,17 @@ void cariDataTertentu() {
 
         do {
         	if(i == nodeBantu->data) {
-        		ditemukan = true;
+        		dataDitemukan = true;
         		break;
 			}
             nodeBantu = nodeBantu->next;
         } while (nodeBantu != tail->next);
 
-        if(ditemukan) {
-	        cout << "Data Ditemukan : " << endl;
+        if(dataDitemukan) {
+	        cout << "Data ditemukan : " << endl;
 	        cout << nodeBantu->data << endl;
 		} else {
-			cout << "Data Tidak Ditemukan";
+			cout << "Data tidak ditemukan";
 		}
     } else {
         cout << "List masih kosong" << endl;
@@ -188,9 +190,10 @@ void cariDataTertentu() {
 
 void hapusTertentu() {
 	int i;
-	bool ditemukan = false;
+	bool dataDitemukan = false;
 	TNode *nodeHapus, *nodeBantu;
     nodeHapus = head;
+
 
     if (isEmpty() == 0) {
 	    cout<<"Masukan data yang ingin dihapus = ";
@@ -198,13 +201,13 @@ void hapusTertentu() {
 
         do {
         	if(i == nodeHapus->data) {
-        		ditemukan = true;
+        		dataDitemukan = true;
         		break;
 			}
             nodeHapus = nodeHapus->next;
         } while (nodeHapus != tail->next);
 
-        if(ditemukan) {
+        if(dataDitemukan) {
         	if(nodeHapus == head) {
         		hapusDepan();
 			} else if(nodeHapus == tail) {
@@ -222,16 +225,17 @@ void hapusTertentu() {
 				}
 
 				delete nodeHapus;
-				cout << "Data " << i << " Berhasil Dihapus" << endl;
+				cout << "Data " << i << " berhasil dihapus" << endl;
 			}
 		} else {
-			cout << "Data Tidak Ditemukan";
+			cout << "Data tidak ditemukan";
 		}
     } else {
         cout << "List masih kosong" << endl;
     }
 
 }
+
 
 int main() {
     int pil, dataBaru;
@@ -256,15 +260,15 @@ int main() {
         cin>>pil;
 
         if(cin.fail()){
-            cout<<"\n Maaf, Inputan Harus Berupa Angka!";
             cin.clear();
-            cin.ignore(1000, '\n');
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout<<"\n Maaf, Inputan Harus Berupa Angka!";
 		} else if (pil == 1) {
-            cout<<"Masukan Data = ";
+            cout<<" Masukan Data = ";
             cin>>dataBaru;
             insertDepan(dataBaru);
         } else if (pil == 2) {
-            cout<<"Masukan Data = ";
+            cout<<" Masukan Data = ";
             cin>>dataBaru;
             insertBelakang(dataBaru);
         } else if (pil == 3) {
