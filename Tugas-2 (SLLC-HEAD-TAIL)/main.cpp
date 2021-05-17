@@ -156,18 +156,18 @@ void tampilData() {
     }
 }
 
-void cariData() {
-	int q;
+void cariDataTertentu() {
+	int i;
 	bool ditemukan = false;
 	TNode *nodeBantu;
     nodeBantu = head;
 
     if (isEmpty() == 0) {
 	    cout<<"Masukan data yang ingin dicari = ";
-	    cin>>q;
+	    cin>>i;
 
         do {
-        	if(q == nodeBantu->data) {
+        	if(i == nodeBantu->data) {
         		ditemukan = true;
         		break;
 			}
@@ -187,17 +187,17 @@ void cariData() {
 }
 
 void hapusTertentu() {
-	int q;
+	int i;
 	bool ditemukan = false;
 	TNode *nodeHapus, *nodeBantu;
     nodeHapus = head;
 
     if (isEmpty() == 0) {
 	    cout<<"Masukan data yang ingin dihapus = ";
-	    cin>>q;
+	    cin>>i;
 
         do {
-        	if(q == nodeHapus->data) {
+        	if(i == nodeHapus->data) {
         		ditemukan = true;
         		break;
 			}
@@ -222,7 +222,7 @@ void hapusTertentu() {
 				}
 
 				delete nodeHapus;
-				cout << "Data " << q << " berhasil dihapus" << endl;
+				cout << "Data " << i << " Berhasil Dihapus" << endl;
 			}
 		} else {
 			cout << "Data Tidak Ditemukan";
@@ -248,7 +248,7 @@ int main() {
         cout<<" = 4. Hapus Belakang                   ="<<endl;
         cout<<" = 5. Tampil Data                      ="<<endl;
         cout<<" = 6. Hapus semua Data                 ="<<endl;
-        cout<<" = 7. Cari Data                        ="<<endl;
+        cout<<" = 7. Cari Data Tertentu               ="<<endl;
         cout<<" = 8. Hapus Data Tertentu              ="<<endl;
         cout<<" = 9. Exit                             ="<<endl;
         cout<<" ======================================="<<endl;
@@ -276,7 +276,7 @@ int main() {
         } else if (pil == 6) {
             hapusSemua();
         } else if (pil == 7) {
-            cariData();
+            cariDataTertentu();
         } else if (pil == 8) {
             hapusTertentu();
         } else if (pil != 9) {
