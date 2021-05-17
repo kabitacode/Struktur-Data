@@ -183,7 +183,7 @@ void cariDataTertentu() {
 			cout << "Data tidak ditemukan";
 		}
     } else {
-        cout << "List masih kosong" << endl;
+        cout << "Data tidak ada" << endl;
     }
 
 }
@@ -231,7 +231,7 @@ void hapusTertentu() {
 			cout << "Data tidak ditemukan";
 		}
     } else {
-        cout << "List masih kosong" << endl;
+        cout << "Data tidak ada" << endl;
     }
 
 }
