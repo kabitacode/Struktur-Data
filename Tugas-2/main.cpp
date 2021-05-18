@@ -18,8 +18,8 @@ struct TNode {
 TNode *head, *tail; // deklarasi variabel pointer head dan tail untuk menunjukkan head dan tail
 
 void init() {
-    head = NULL; // 0 next 1
-    tail = NULL; // 5 next 0
+    head = NULL;
+    tail = NULL;
 }
 
 int isEmpty() {
@@ -259,7 +259,7 @@ int main() {
         cout<<" Masukan Pilihan : ";
         cin>>pil;
 
-        if(cin.fail()){
+        if(cin.fail()){ //validasi jika input yang dimasukan bukan integer
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout<<"\n Maaf, Inputan Harus Berupa Angka!";
