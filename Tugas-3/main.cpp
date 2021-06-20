@@ -1,3 +1,8 @@
+// =======================;
+// Nama: Muhamad Zulfiqor;
+// NIM: 1120031025;
+// =======================;
+
 #include <iostream>
 #define MAX_STACK 10
 
